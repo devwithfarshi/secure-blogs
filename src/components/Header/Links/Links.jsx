@@ -4,7 +4,7 @@ const Links = () => {
   const links = [
     {
       title: "home",
-      path: "/home",
+      path: "/",
     },
     {
       title: "about",
