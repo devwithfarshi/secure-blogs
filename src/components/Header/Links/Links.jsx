@@ -1,6 +1,5 @@
-import Link from "next/link";
-
-const Links = () => {
+import NavLinks from "./NavLinks";
+const Links = ({ setNavOpen }) => {
   const links = [
     {
       title: "home",
@@ -19,17 +18,37 @@ const Links = () => {
       path: "/contact",
     },
   ];
+
+  const isAdmin = true;
+  const session = true;
   return (
     <>
       {links.map((link) => (
-        <Link
-          key={link.title}
-          href={link.path}
-          className="uppercase inline-block text-3xl font-medium transition-all duration-150 hover:text-[royalblue]"
-        >
-          {link.title}
-        </Link>
+        <>
+          <NavLinks
+            setNavOpen={setNavOpen}
+            key={link.title}
+            title={link.title}
+            path={link.path}
+          />
+        </>
       ))}
+      {session ? (
+        <>
+          {isAdmin && (
+            <NavLinks setNavOpen={setNavOpen} title={"admin"} path={"/admin"} />
+          )}
+          <button
+            className={`uppercase inline-block text-2xl font-medium transition-all duration-150 py-2 px-4 rounded dark:bg-[--bg-light] dark:text-[--text-dark] bg-[--bg-dark] text-[--text] hover:opacity-70`}
+          >
+            Log out
+          </button>
+        </>
+      ) : (
+        <>
+          <NavLinks setNavOpen={setNavOpen} title={"Login"} path={"/login"} />
+        </>
+      )}
     </>
   );
 };

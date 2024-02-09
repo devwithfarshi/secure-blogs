@@ -7,7 +7,7 @@ const ThemeIcon = () => {
   };
   return (
     <div className="cursor-pointer" onClick={themeHandler}>
-      <BsMoonStarsFill className="text-3xl dark:text-[#ffffff] text-[#32174D]" />
+      <BsMoonStarsFill className="text-3xl dark:text-[--text] text-[--bg-dark]" />
     </div>
   );
 };

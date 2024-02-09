@@ -11,12 +11,13 @@ export default function RootLayout({ children }) {
   return (
     <html className="dark" lang="en">
       <body
-        className="dark:bg-[#32174D] dark:text-[#ffffff]
-        bg-[#ffffff] text-[#0a0a0a]
+        className="dark:bg-[--bg-dark] dark:text-[--textSoft]
+        bg-[--bg-light] text-[--tex-dark]
+        flex flex-col justify-between h-[100vh]
         "
       >
         <Header />
-        <main className="container">{children}</main>
+        <main className="container h-full py-2">{children}</main>
         <Footer />
       </body>
     </html>

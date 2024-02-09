@@ -7,7 +7,21 @@
 /* font-family: 'Poppins', sans-serif; */
 * {
   font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+:root {
+  --bg-dark: #0d0c22;
+  --bgsoft: #2d2b42;
+  --bg-light: #f7f7f7;
+  --btn: #3673fd;
+  --textSoft: #e5e5e5;
+  --text: #ffffff;
+  --text-dark: #0a0a0a;
+}
+
 html {
   font-size: 62.5% !important;
 }
