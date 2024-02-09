@@ -14,9 +14,9 @@ const Header = () => {
           <Link href={"/"}>Secure Blog</Link>
         </div>
         <ul
-          className={`transition-all duration-150 flex items-center gap-14 md:flex-row md:relative md:right-0 md:top-0 md:translate-y-[-0%] flex-col absolute  top-[50%] translate-y-[-50%]  ${
+          className={`transition-all duration-150 flex items-center gap-14 md:flex-row md:relative md:right-0 md:top-0 md:translate-y-[-0%] flex-col absolute  top-[50%] translate-y-[-50%] right-0  ${
             navOpen
-              ? "right-0 dark:bg-[--bg-dark] bg-[--bg-light] justify-center px-[2rem] h-[100%]"
+              ? "bg-[--bgSoft] justify-center px-[2rem] h-[100vh]"
               : "right-[-50%]"
           }`}
         >
