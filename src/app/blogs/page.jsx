@@ -1,6 +1,8 @@
 import SingleBlogs from "@/components/SingleBlogs/SingleBlogsCard";
+import { getPosts } from "@/lib/data";
 
-const Blogs = () => {
+const Blogs = async () => {
+  const posts = await getPosts();
   return (
     <>
       <section
@@ -8,13 +10,23 @@ const Blogs = () => {
       flex flex-wrap items-start gap-5 justify-center
       "
       >
-        {[...Array(15)].map((v, i) => {
-          return (
-            <>
-              <SingleBlogs />
-            </>
-          );
-        })}
+        {posts?.length > 0 ? (
+          posts.map((post, i) => {
+            return (
+              <>
+                <SingleBlogs key={post.slug} post={post} />
+                <SingleBlogs key={post.slug} post={post} />
+                <SingleBlogs key={post.slug} post={post} />
+              </>
+            );
+          })
+        ) : (
+          <>
+            <h3 className="text-center font-semibold text-3xl">
+              No posts in database!
+            </h3>
+          </>
+        )}
       </section>
     </>
   );
