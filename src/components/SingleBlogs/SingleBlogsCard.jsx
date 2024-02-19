@@ -21,7 +21,7 @@ const SingleBlogs = ({ post }) => {
         )}
         <h6 className="text-3xl font-semibold">{post.title}</h6>
         <p className="text-xl my-5">{post.body.slice(0, 15)}</p>
-        <Link className="text-2xl underline" href={`/blogs/${post.slug}`}>
+        <Link className="text-2xl underline" href={`/blogs/${post._id}`}>
           Read More
         </Link>
         <span className="inline-block absolute top-[50%] text-2xl font-bold rotate-90 right-[-5%]">

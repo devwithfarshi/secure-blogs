@@ -9,7 +9,7 @@ const SingleBlog = async ({ params }) => {
   return (
     <>
       <section className="md:px-0 py-10 px-5 h-full flex md:flex-row flex-col gap-20">
-        {post.image && (
+        {post?.image && (
           <figure>
             <Image
               src={post.image}
@@ -21,7 +21,7 @@ const SingleBlog = async ({ params }) => {
           </figure>
         )}
         <div>
-          <h2 className="text-[4rem] font-semibold">{post.title}</h2>
+          <h2 className="text-[4rem] font-semibold">{post?.title}</h2>
           <Suspense
             fallback={
               <>
@@ -29,9 +29,9 @@ const SingleBlog = async ({ params }) => {
               </>
             }
           >
-            <PostUser userId={post.userId} />
+            <PostUser userId={post?.userId} />
           </Suspense>
-          <p className="text-3xl mt-10">{post.body}</p>
+          <p className="text-3xl mt-10">{post?.body}</p>
         </div>
       </section>
     </>

@@ -44,11 +44,7 @@ const postSchema = new mongoose.Schema(
     userId: {
       type: String,
       required: true,
-    },
-    slug: {
-      type: String,
-      required: true,
-      unique: true,
+      default: "65c9db0fdd901c0be4326303",
     },
   },
   { timestamps: true }

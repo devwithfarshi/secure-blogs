@@ -15,8 +15,6 @@ const Blogs = async () => {
             return (
               <>
                 <SingleBlogs key={post.slug} post={post} />
-                <SingleBlogs key={post.slug} post={post} />
-                <SingleBlogs key={post.slug} post={post} />
               </>
             );
           })

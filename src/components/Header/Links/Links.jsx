@@ -14,6 +14,10 @@ const Links = ({ setNavOpen }) => {
       path: "/blogs",
     },
     {
+      title: "create post",
+      path: "/createpost",
+    },
+    {
       title: "contact",
       path: "/contact",
     },
